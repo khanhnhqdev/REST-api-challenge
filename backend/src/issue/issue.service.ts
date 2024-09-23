@@ -41,18 +41,22 @@ export class IssueService {
 		const isDuplicate = this.issues.some(existingIssue => 
 			existingIssue.title === issue.title && existingIssue.description === issue.description
 		);
+
+		console.log(isDuplicate);
 		
 		if (isDuplicate) {
 			console.error('Duplicate issue found. Cannot create a new issue.');
-			return null; // Return null if a duplicate is found
+			return null;
 		}
 
 		const newIssue: Issue = {
 			id: (this.issues.length + 1).toString(), // Generate new string ID
 			...issue
 		};
+
 		this.issues.push(newIssue);
 		this.saveIssues();
+		console.log(newIssue);
 		return newIssue;
 	}
 

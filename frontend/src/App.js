@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-rou
 import logo from './logo.svg';
 import CreateIssue from "./components/CreateIssue";
 // import ReadIssue from "./components/ReadIssue";
-// import UpdateIssue from "./components/UpdateIssue";
+import UpdateIssue from "./components/UpdateIssue";
 // import DeleteIssue from "./components/DeleteIssue";
 import './App.css';
 
@@ -27,9 +27,9 @@ function App() {
           <div className="content">
             <Routes>
 				<Route path="/create" element={<CreateIssue/>} />
-				{/* <Route path="/read" component={ReadIssue} />
-				<Route path="/update" component={UpdateIssue} />
-				<Route path="/delete" component={DeleteIssue} /> */}
+				{/* <Route path="/read" component={ReadIssue} /> */}
+				<Route path="/update" element={<UpdateIssue/>} />
+				{/* <Route path="/delete" component={DeleteIssue} /> */} */}
             </Routes>
           </div>
         </div>

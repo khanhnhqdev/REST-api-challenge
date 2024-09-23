@@ -102,3 +102,28 @@
     flex: 1;
     padding: 20px;
 }
+
+.vertical-form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 300px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 25px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group button {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #68BBE3 ;
+}
+
+label {
+    margin-right: 10px;
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Optional: make labels bold */
+}

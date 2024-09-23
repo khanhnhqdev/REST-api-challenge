@@ -13,7 +13,7 @@ export class IssueController {
 	
 	@Get(':id')
 	findOne(@Param('id') id: string): Issue {
-		return this.issueService.findOne(+id);
+		return this.issueService.findOne(id);
 	}
 	
 	@Post()
@@ -23,12 +23,12 @@ export class IssueController {
 	
 	@Put(':id')
 	update(@Param('id') id: string, @Body() updateIssueDto: Partial<{ title: string; description: string }>): Issue {
-		return this.issueService.update(+id, updateIssueDto);
+		return this.issueService.update(id, updateIssueDto);
 	}
 	
 	@Delete(':id')
 	delete(@Param('id') id: string): boolean {
-		return this.issueService.delete(+id);
+		return this.issueService.delete(id);
 	}
 }
 
