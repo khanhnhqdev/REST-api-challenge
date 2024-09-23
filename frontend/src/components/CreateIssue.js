@@ -23,13 +23,28 @@ export const CreateIssue = () => {
   };
 
   return (
-    <div>
+    <div className='create-object-form'>
         <h2>Create Issue</h2>
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="id" placeholder="ID" onChange={handleChange} />
-            <input type="text" name="title" placeholder="Title" onChange={handleChange} />
-            <textarea name="description" placeholder="Description" onChange={handleChange}></textarea>
-            <button type="submit">Create</button>
+        <form className='vertical-form' onSubmit={handleSubmit}>
+            <div class="form-group">
+                <label for="title">ID</label>
+                <input type="text" name="id" placeholder="ID" onChange={handleChange} />
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" placeholder="Title" onChange={handleChange} />
+            </div>
+            
+            <div class="form-group">
+                <label for="title">Description</label>
+                <textarea name="description" placeholder="Description" onChange={handleChange}></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Create</button>
+            </div>
+            
         </form>
       {response && <div>Response: {JSON.stringify(response)}</div>}
     </div>
