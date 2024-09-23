@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: web-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - web-network
+  backend:
+    build:
+      context: ./backend
+    container_name: web-backend
+    ports:
+      - "3001:3001"
+    networks:
+      - web-network  
+networks:
+  web-network:
+    name: web-network

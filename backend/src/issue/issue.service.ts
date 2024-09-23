@@ -58,7 +58,6 @@ export class IssueService {
 
 		this.issues.push(newIssue);
 		this.saveIssues();
-		console.log(newIssue);
 		return newIssue;
 	}
 

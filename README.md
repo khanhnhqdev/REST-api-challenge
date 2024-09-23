@@ -22,8 +22,25 @@
     * Result form, Error form core component in the UI
     * ApiClient in the FE
     
-* Dockerize my code (done right after submit the video)
 * Save data to a database instead of a local file
+
+**How to run code**:
+* Backend
+```
+    npm install
+    npm run start
+```
+
+* Frontend
+```
+    npm install
+    npm run start
+```
+
+* Or use docker
+```
+    docker-compose up
+```
 
 
 
