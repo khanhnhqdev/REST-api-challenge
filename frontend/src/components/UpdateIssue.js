@@ -44,7 +44,7 @@ function UpdateIssue() {
         </div>
 
         <div class="form-group">
-            <button type="submit">Create</button>
+            <button type="submit">Update</button>
         </div>
       </form>
       {response && <div>Response: {JSON.stringify(response)}</div>}
