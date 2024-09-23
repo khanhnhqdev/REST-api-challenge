@@ -12,22 +12,22 @@ export class IssueController {
 	}
 	
 	@Get(':id')
-	findOne(@Param('id') id: string): Issue {
+	findOne(@Param('id') id: string): Issue | String {
 		return this.issueService.findOne(id);
 	}
 	
 	@Post()
-	create(@Body() createIssueDto: { id: number; title: string; description: string }): Issue {
+	create(@Body() createIssueDto: { id: string; title: string; description: string }): Issue | string {
 		return this.issueService.create(createIssueDto);
 	}
 	
 	@Put(':id')
-	update(@Param('id') id: string, @Body() updateIssueDto: Partial<{ title: string; description: string }>): Issue {
+	update(@Param('id') id: string, @Body() updateIssueDto: Partial<{ title: string; description: string }>): Issue | string {
 		return this.issueService.update(id, updateIssueDto);
 	}
 	
 	@Delete(':id')
-	delete(@Param('id') id: string): boolean {
+	delete(@Param('id') id: string): any {
 		return this.issueService.delete(id);
 	}
 }

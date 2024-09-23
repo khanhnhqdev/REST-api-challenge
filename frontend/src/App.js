@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 import logo from './logo.svg';
 import CreateIssue from "./components/CreateIssue";
-// import ReadIssue from "./components/ReadIssue";
+import ReadIssue from "./components/ReadIssue";
 import UpdateIssue from "./components/UpdateIssue";
-// import DeleteIssue from "./components/DeleteIssue";
+import DeleteIssue from "./components/DeleteIssue";
 import './App.css';
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
           <div className="content">
             <Routes>
 				<Route path="/create" element={<CreateIssue/>} />
-				{/* <Route path="/read" component={ReadIssue} /> */}
+				<Route path="/read" element={<ReadIssue/>} />
 				<Route path="/update" element={<UpdateIssue/>} />
-				{/* <Route path="/delete" component={DeleteIssue} /> */} */}
+				<Route path="/delete" element={<DeleteIssue/>} />
             </Routes>
           </div>
         </div>
