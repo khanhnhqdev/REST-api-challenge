@@ -43,10 +43,19 @@
 }
   
 .app-header {
-    background-color: #282c34;
+    background-color: #68BBE3;
     padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     color: white;
-    text-align: center;
+    text-align: left;
+    display: flex;
+}
+
+.app-header .app-logo {
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
 }
 
 .app-body {
@@ -55,8 +64,9 @@
 
 .navbar {
     width: 200px;
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
     padding: 15px;
+    height: 100vh;
 }
 
 .navbar ul {
@@ -66,6 +76,21 @@
 
 .navbar li {
     margin: 10px 0;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    height: 20px;
+    padding: 10px;
+}
+
+.navbar li:hover {
+    background-color: #68BBE3;
+    border-radius: 4px; /* Change this to your desired hover color */
+}
+
+.navbar li.active {
+    background-color: #68BBE3;
 }
 
 .navbar a {
